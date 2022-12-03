@@ -1,0 +1,402 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 996168094326164
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "direction",
+					"sid": 724935390669532,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Cat",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "direction",
+					"sid": 474694364693894,
+					"parameters": {
+						"x": "Cat.X",
+						"y": "Cat.Y"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "hit_box",
+					"sid": 138193189138373,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Cat",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 419571867930835
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cat movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 936151574957154,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Cat",
+							"sid": 598193801477739,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "direction",
+							"sid": 153440952043351,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 316262497939742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 411482828079625,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Cat",
+							"sid": 631721981397317,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "direction",
+							"sid": 108267965420516,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 473755444534253
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 900198830204394,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Cat",
+							"sid": 735369562139617,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "direction",
+							"sid": 507434787630936,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 549099517994576
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 575799367347183,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Cat",
+							"sid": 776711410560125,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "direction",
+							"sid": 651942379147653,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 936029628784688
+				}
+			],
+			"sid": 277273358127187
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "cat animation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "direction",
+							"sid": 518376037376958,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [],
+					"sid": 743468147351296,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "direction",
+									"sid": 233578195980396,
+									"parameters": {
+										"within": "46",
+										"angle": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Cat",
+									"sid": 528453168725807,
+									"parameters": {
+										"animation": "\"side\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Cat",
+									"sid": 347896728196062,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 657612495011100
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "direction",
+									"sid": 815332707814551,
+									"parameters": {
+										"within": "46",
+										"angle": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Cat",
+									"sid": 372102431801595,
+									"parameters": {
+										"animation": "\"side\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Cat",
+									"sid": 915218423621661,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 930981126610125
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "direction",
+									"sid": 211000491221125,
+									"parameters": {
+										"within": "10",
+										"angle": "270"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Cat",
+									"sid": 483458539768463,
+									"parameters": {
+										"animation": "\"back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 152028825342651
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "direction",
+									"sid": 305000504625318,
+									"parameters": {
+										"within": "10",
+										"angle": "90"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Cat",
+									"sid": 438639509661001,
+									"parameters": {
+										"animation": "\"forward\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 642675321864506
+						}
+					]
+				}
+			],
+			"sid": 333330792128066
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fight",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 633056516458382,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "weapon",
+							"sid": 533188875587089,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 117284375236576
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 691177582251552
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "weapon",
+							"sid": 805511893544694
+						}
+					],
+					"sid": 854398955225922
+				}
+			],
+			"sid": 913937312823741
+		}
+	],
+	"sid": 309606629229580
+}
