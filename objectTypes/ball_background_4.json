@@ -1,0 +1,57 @@
+{
+	"name": "ball_background_4",
+	"plugin-id": "Sprite",
+	"sid": 657802923827566,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 159,
+						"height": 162,
+						"originX": 0.49056603773584906,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9596839,
+						"collisionPoly": {
+							"points": [
+								0.0440251572327044,
+								0.06172839506172839,
+								0.49056603773584906,
+								0.006172839506172839,
+								0.9559748427672956,
+								0.037037037037037035,
+								0.9874213836477987,
+								0.5,
+								0.9559748427672956,
+								0.9567901234567902,
+								0.49056603773584906,
+								0.9876543209876543,
+								0.0440251572327044,
+								0.9320987654320988,
+								0.006289308176100629,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 609672539896105,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

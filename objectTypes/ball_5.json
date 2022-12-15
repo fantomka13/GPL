@@ -1,0 +1,63 @@
+{
+	"name": "ball_5",
+	"plugin-id": "Sprite",
+	"sid": 825948539265143,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 647786342643377
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 82,
+						"originX": 0.4878048780487805,
+						"originY": 0.4878048780487805,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7827600,
+						"collisionPoly": {
+							"points": [
+								0.15853658536585366,
+								0.15853658536585366,
+								0.4878048780487805,
+								0.012195121951219513,
+								0.8170731707317073,
+								0.14634146341463414,
+								0.975609756097561,
+								0.4878048780487805,
+								0.8292682926829268,
+								0.8292682926829268,
+								0.4878048780487805,
+								0.975609756097561,
+								0.14634146341463414,
+								0.8170731707317073,
+								0.012195121951219513,
+								0.4878048780487805
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 744046624420129,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

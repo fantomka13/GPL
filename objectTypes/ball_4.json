@@ -1,0 +1,68 @@
+{
+	"name": "ball_4",
+	"plugin-id": "Sprite",
+	"sid": 871044536100835,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 440260747810861
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 476141106855016
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 82,
+						"height": 83,
+						"originX": 0.4878048780487805,
+						"originY": 0.4939759036144578,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6203158,
+						"collisionPoly": {
+							"points": [
+								0.15853658536585366,
+								0.1686746987951807,
+								0.4878048780487805,
+								0,
+								0.8170731707317073,
+								0.1566265060240964,
+								0.975609756097561,
+								0.4939759036144578,
+								0.8292682926829268,
+								0.8313253012048193,
+								0.4878048780487805,
+								0.9759036144578314,
+								0.14634146341463414,
+								0.8192771084337349,
+								0.012195121951219513,
+								0.4939759036144578
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 701672434094056,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

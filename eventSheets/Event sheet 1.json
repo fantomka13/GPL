@@ -2,56 +2,274 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "catHP",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 671325959511205
+		},
+		{
+			"eventType": "variable",
+			"name": "mouse_1_HP",
+			"type": "number",
+			"initialValue": "10",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 291248560099558
+		},
+		{
+			"eventType": "variable",
+			"name": "ItemCounter",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 565262471258953
+		},
+		{
+			"eventType": "variable",
+			"name": "stoun_spawn_HP",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 890289093833114
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
+					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 996168094326164
+					"sid": 922098275165416,
+					"parameters": {
+						"variable": "catHP",
+						"comparison": 0,
+						"value": "0"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "pin-to-object-properties",
-					"objectClass": "direction",
-					"sid": 724935390669532,
-					"behaviorType": "Pin",
-					"parameters": {
-						"pin-to": "Cat",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
-					}
-				},
-				{
 					"id": "set-position",
-					"objectClass": "direction",
-					"sid": 474694364693894,
+					"objectClass": "Cat",
+					"sid": 996400355325391,
 					"parameters": {
-						"x": "Cat.X",
-						"y": "Cat.Y"
+						"x": "126",
+						"y": "760"
 					}
 				},
 				{
-					"id": "pin-to-object-properties",
-					"objectClass": "hit_box",
-					"sid": 138193189138373,
-					"behaviorType": "Pin",
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 295174515792969,
 					"parameters": {
-						"pin-to": "Cat",
-						"x": true,
-						"y": true,
-						"angle": true,
-						"width-type": "no",
-						"height-type": "no",
-						"z": false
+						"variable": "catHP",
+						"value": "6"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cat",
+					"sid": 416847836756134,
+					"parameters": {
+						"object": "ball_4",
+						"layer": "5",
+						"image-point": "0",
+						"create-hierarchy": false
 					}
 				}
 			],
-			"sid": 419571867930835
+			"sid": 479405877604736
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 649128714155764,
+					"parameters": {
+						"variable": "mouse_1_HP",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Mouse_1",
+					"sid": 552368958154567
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Mouse_1",
+					"sid": 996879304304063,
+					"parameters": {
+						"object": "ball_2",
+						"layer": "3",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 610431165708933
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "at the start of layout",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 419130421376379
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "HitBox",
+							"sid": 800582900826951,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Cat",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "direction",
+							"sid": 570661157837302,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Cat",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "direction",
+							"sid": 859812822365790,
+							"parameters": {
+								"object": "Cat",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "punch",
+							"sid": 984206673071453
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "HitBox",
+							"sid": 215607359491812,
+							"parameters": {
+								"object": "Cat",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bullet",
+							"sid": 175664627826079
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ball_5",
+							"sid": 554675327342260
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ball_2",
+							"sid": 387261665590398
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ball_3",
+							"sid": 777067847670867
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ball_4",
+							"sid": 388455156682900
+						},
+						{
+							"id": "set-solid-collision-filter",
+							"objectClass": "HitBox",
+							"sid": 537398082016560,
+							"parameters": {
+								"mode": "exclusive",
+								"tags": "\"border\""
+							}
+						},
+						{
+							"id": "set-solid-collision-filter",
+							"objectClass": "hitBoxMouse",
+							"sid": 102987675089622,
+							"parameters": {
+								"mode": "exclusive",
+								"tags": "\"border\""
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "hitBoxMouse",
+							"sid": 848368332865204,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Mouse_1",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "bullet2",
+							"sid": 842864698781004
+						},
+						{
+							"id": "destroy",
+							"objectClass": "mouse_small",
+							"sid": 363701842103356
+						},
+						{
+							"id": "destroy",
+							"objectClass": "teleport_effect",
+							"sid": 499697051106165
+						}
+					],
+					"sid": 653167052562098
+				}
+			],
+			"sid": 804898985130391
 		},
 		{
 			"eventType": "group",
@@ -66,41 +284,7 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 936151574957154,
-							"parameters": {
-								"key": 65
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Cat",
-							"sid": 598193801477739,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "left"
-							}
-						},
-						{
-							"id": "simulate-control",
-							"objectClass": "direction",
-							"sid": 153440952043351,
-							"behaviorType": "8Direction",
-							"parameters": {
-								"control": "left"
-							}
-						}
-					],
-					"sid": 316262497939742
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "key-is-down",
-							"objectClass": "Keyboard",
-							"sid": 411482828079625,
+							"sid": 619447898116182,
 							"parameters": {
 								"key": 68
 							}
@@ -110,7 +294,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "Cat",
-							"sid": 631721981397317,
+							"sid": 543241362923195,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "right"
@@ -119,14 +303,14 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "direction",
-							"sid": 108267965420516,
+							"sid": 527481111385541,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "right"
 							}
 						}
 					],
-					"sid": 473755444534253
+					"sid": 768958743374871
 				},
 				{
 					"eventType": "block",
@@ -134,7 +318,41 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 900198830204394,
+							"sid": 163041740261860,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Cat",
+							"sid": 732692311733341,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "direction",
+							"sid": 800887495856964,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 225050906087582
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 126267084798731,
 							"parameters": {
 								"key": 83
 							}
@@ -144,7 +362,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "Cat",
-							"sid": 735369562139617,
+							"sid": 588877980592922,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "down"
@@ -153,14 +371,14 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "direction",
-							"sid": 507434787630936,
+							"sid": 134883493669299,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "down"
 							}
 						}
 					],
-					"sid": 549099517994576
+					"sid": 519464197866321
 				},
 				{
 					"eventType": "block",
@@ -168,7 +386,7 @@
 						{
 							"id": "key-is-down",
 							"objectClass": "Keyboard",
-							"sid": 575799367347183,
+							"sid": 845918998589682,
 							"parameters": {
 								"key": 87
 							}
@@ -178,7 +396,7 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "Cat",
-							"sid": 776711410560125,
+							"sid": 720235892541260,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "up"
@@ -187,22 +405,22 @@
 						{
 							"id": "simulate-control",
 							"objectClass": "direction",
-							"sid": 651942379147653,
+							"sid": 763511985916554,
 							"behaviorType": "8Direction",
 							"parameters": {
 								"control": "up"
 							}
 						}
 					],
-					"sid": 936029628784688
+					"sid": 705586404281898
 				}
 			],
-			"sid": 277273358127187
+			"sid": 211367068676713
 		},
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "cat animation",
+			"title": "Cat animation",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -212,12 +430,12 @@
 						{
 							"id": "is-moving",
 							"objectClass": "direction",
-							"sid": 518376037376958,
+							"sid": 290860070204282,
 							"behaviorType": "8Direction"
 						}
 					],
 					"actions": [],
-					"sid": 743468147351296,
+					"sid": 282449232697515,
 					"children": [
 						{
 							"eventType": "block",
@@ -225,7 +443,7 @@
 								{
 									"id": "is-within-angle",
 									"objectClass": "direction",
-									"sid": 233578195980396,
+									"sid": 344442042596228,
 									"parameters": {
 										"within": "46",
 										"angle": "0"
@@ -236,7 +454,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cat",
-									"sid": 528453168725807,
+									"sid": 523223781820801,
 									"parameters": {
 										"animation": "\"side\"",
 										"from": "beginning"
@@ -245,13 +463,13 @@
 								{
 									"id": "set-mirrored",
 									"objectClass": "Cat",
-									"sid": 347896728196062,
+									"sid": 333890569042832,
 									"parameters": {
 										"state": "not-mirrored"
 									}
 								}
 							],
-							"sid": 657612495011100
+							"sid": 461216401812625
 						},
 						{
 							"eventType": "block",
@@ -259,7 +477,7 @@
 								{
 									"id": "is-within-angle",
 									"objectClass": "direction",
-									"sid": 815332707814551,
+									"sid": 523428681325772,
 									"parameters": {
 										"within": "46",
 										"angle": "180"
@@ -270,7 +488,7 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cat",
-									"sid": 372102431801595,
+									"sid": 873479344952763,
 									"parameters": {
 										"animation": "\"side\"",
 										"from": "beginning"
@@ -279,13 +497,13 @@
 								{
 									"id": "set-mirrored",
 									"objectClass": "Cat",
-									"sid": 915218423621661,
+									"sid": 899827419226581,
 									"parameters": {
 										"state": "mirrored"
 									}
 								}
 							],
-							"sid": 930981126610125
+							"sid": 142737890306486
 						},
 						{
 							"eventType": "block",
@@ -293,33 +511,7 @@
 								{
 									"id": "is-within-angle",
 									"objectClass": "direction",
-									"sid": 211000491221125,
-									"parameters": {
-										"within": "10",
-										"angle": "270"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "Cat",
-									"sid": 483458539768463,
-									"parameters": {
-										"animation": "\"back\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 152028825342651
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-within-angle",
-									"objectClass": "direction",
-									"sid": 305000504625318,
+									"sid": 549182163081090,
 									"parameters": {
 										"within": "10",
 										"angle": "90"
@@ -330,24 +522,637 @@
 								{
 									"id": "set-animation",
 									"objectClass": "Cat",
-									"sid": 438639509661001,
+									"sid": 660626245428765,
+									"parameters": {
+										"animation": "\"back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 924635815553420
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-within-angle",
+									"objectClass": "direction",
+									"sid": 185447535539387,
+									"parameters": {
+										"within": "10",
+										"angle": "270"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Cat",
+									"sid": 462088326636312,
 									"parameters": {
 										"animation": "\"forward\"",
 										"from": "beginning"
 									}
 								}
 							],
-							"sid": 642675321864506
+							"sid": 179040467327540
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 275298910101468
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Cat",
+							"sid": 711022964669061,
+							"parameters": {
+								"animation": "\"back\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 247249929466878
 				}
 			],
-			"sid": 333330792128066
+			"sid": 968702376960694
 		},
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Fight",
+			"title": "fight",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "punching",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 924433821662367,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Cat",
+									"sid": 820101285441924,
+									"parameters": {
+										"object": "punch",
+										"layer": "3",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "pin-to-object-properties",
+									"objectClass": "punch",
+									"sid": 109751350992802,
+									"behaviorType": "Pin",
+									"parameters": {
+										"pin-to": "Cat",
+										"x": true,
+										"y": true,
+										"angle": true,
+										"width-type": "absolute",
+										"height-type": "absolute",
+										"z": false
+									}
+								}
+							],
+							"sid": 215231468354413,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Cat",
+											"sid": 708795184638654,
+											"behaviorType": "8Direction"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "punch",
+											"sid": 635456354778519,
+											"parameters": {
+												"angle": "Cat.8Direction.MovingAngle"
+											}
+										}
+									],
+									"sid": 288777854163335
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 514480677802349
+										},
+										{
+											"id": "is-mirrored",
+											"objectClass": "Cat",
+											"sid": 944190543280502
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "punch",
+											"sid": 961155691983539,
+											"parameters": {
+												"angle": "180"
+											}
+										}
+									],
+									"sid": 596709027956140
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 715437967639143
+										}
+									],
+									"actions": [
+										{
+											"id": "set-angle",
+											"objectClass": "punch",
+											"sid": 726974787405747,
+											"parameters": {
+												"angle": "0"
+											}
+										}
+									],
+									"sid": 165124734620611
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "punch",
+									"sid": 922080593871070,
+									"parameters": {
+										"animation": "\"Animation 1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "punch",
+									"sid": 190894680105127
+								}
+							],
+							"sid": 812904409443932
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "hitBoxMouse",
+									"sid": 211767122731125,
+									"parameters": {
+										"object": "punch"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 919176448280931,
+									"parameters": {
+										"variable": "mouse_1_HP",
+										"value": "1"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "Mouse_1",
+									"sid": 842733958108302,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								}
+							],
+							"sid": 288167511658841,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Cat",
+											"sid": 725757437784388,
+											"parameters": {
+												"comparison": 2,
+												"x-co-ordinate": "Mouse_1.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-x",
+											"objectClass": "Mouse_1",
+											"sid": 491770776873604,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "Self.X+100"
+											}
+										}
+									],
+									"sid": 410130448037535
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-x",
+											"objectClass": "Cat",
+											"sid": 326998580238273,
+											"parameters": {
+												"comparison": 4,
+												"x-co-ordinate": "Mouse_1.X"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-x",
+											"objectClass": "Mouse_1",
+											"sid": 407658732410855,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "Self.X+100"
+											}
+										}
+									],
+									"sid": 308036878763160
+								}
+							]
+						}
+					],
+					"sid": 377855136651060
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "bullet",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Mouse_1",
+									"sid": 988115595349238,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Cat",
+										"image-point": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 143552724998419,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 830916112153734,
+											"parameters": {
+												"interval-seconds": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "spawn-another-object",
+											"objectClass": "Mouse_1",
+											"sid": 185560385763394,
+											"parameters": {
+												"object": "bullet",
+												"layer": "3",
+												"image-point": "0",
+												"create-hierarchy": false
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "bullet",
+											"sid": 453704595784960,
+											"parameters": {
+												"angle": "angle(Self.X,Self.Y,Cat.X,Cat.Y)"
+											}
+										}
+									],
+									"sid": 647078248537931
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "bullet",
+									"sid": 659360433626259,
+									"parameters": {
+										"object": "HitBox"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "bullet",
+									"sid": 187933604693992
+								},
+								{
+									"id": "flash",
+									"objectClass": "Cat",
+									"sid": 553892562045681,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "0.5"
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 215208979384648,
+									"parameters": {
+										"variable": "catHP",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 709927363979301
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "bullet",
+									"sid": 259550320045776,
+									"parameters": {
+										"object": "punch"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "bullet",
+									"sid": 788847209184401
+								}
+							],
+							"sid": 645217241871264
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-outside-layout",
+									"objectClass": "bullet",
+									"sid": 617610954505067
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "bullet",
+									"sid": 492771413943531
+								}
+							],
+							"sid": 828092474309101
+						}
+					],
+					"sid": 702378689856921
+				}
+			],
+			"sid": 892016658701992
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Interface",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "HP",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 845525450493899,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 3,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP3",
+									"sid": 651787001283133,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 273950622680438
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 103320088836446,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 4,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP3",
+									"sid": 952083856439774,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 701070766643444
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 697201890653158,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 3,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP2",
+									"sid": 291004956743135,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 612177680561124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 752369367985284,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 4,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP2",
+									"sid": 575372740450453,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 706201652082260
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 708053900720770,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP",
+									"sid": 278560199446562,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 453680296562939
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 470520734747138,
+									"parameters": {
+										"variable": "catHP",
+										"comparison": 1,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "HP",
+									"sid": 478902014743130,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 908740668035300
+						}
+					],
+					"sid": 920774245624714
+				}
+			],
+			"sid": 719759466937675
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Item_collection",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -355,48 +1160,845 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 633056516458382,
+							"id": "has-los-to-object",
+							"objectClass": "ball_1",
+							"sid": 467019322955425,
+							"behaviorType": "LineOfSight",
 							"parameters": {
-								"key": 32
+								"object": "Cat",
+								"image-point": "0"
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 597976884505829,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "weapon",
-							"sid": 533188875587089,
-							"parameters": {
-								"animation": "\"Animation 1\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 982418243763944,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ball_1",
+									"sid": 537202615254006,
+									"parameters": {
+										"object": "ball_background_1",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "ball_1",
+									"sid": 135609115754298,
+									"parameters": {
+										"layer": "8"
+									}
+								}
+							],
+							"sid": 354602041235276
 						}
-					],
-					"sid": 117284375236576
+					]
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 691177582251552
+							"id": "has-los-to-object",
+							"objectClass": "ball_2",
+							"sid": 868510947165468,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 817609872128766,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 539410899040094,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ball_2",
+									"sid": 642374693530248,
+									"parameters": {
+										"object": "ball_background_2",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "ball_2",
+									"sid": 189599292877321,
+									"parameters": {
+										"layer": "8"
+									}
+								}
+							],
+							"sid": 177748667491020
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "ball_3",
+							"sid": 312036646943238,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 832864758658668,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 334229957039789,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ball_3",
+									"sid": 994560130541489,
+									"parameters": {
+										"object": "ball_background_3",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "ball_3",
+									"sid": 432555674473854,
+									"parameters": {
+										"layer": "8"
+									}
+								}
+							],
+							"sid": 409719935857348
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "ball_4",
+							"sid": 447707215398300,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 788905985573317,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 123219321862459,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ball_4",
+									"sid": 313842957890603,
+									"parameters": {
+										"object": "ball_background_4",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "ball_4",
+									"sid": 671735016652587,
+									"parameters": {
+										"layer": "8"
+									}
+								}
+							],
+							"sid": 335766636962687
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "ball_5",
+							"sid": 345106285874177,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 275822235222891,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 301407224951929,
+									"parameters": {
+										"key": 70
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ball_5",
+									"sid": 730552070813949,
+									"parameters": {
+										"object": "ball_background_5",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "move-to-layer",
+									"objectClass": "ball_5",
+									"sid": 241780204961355,
+									"parameters": {
+										"layer": "8"
+									}
+								}
+							],
+							"sid": 412095786714943
+						}
+					]
+				}
+			],
+			"sid": 968681893025815
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enviroment ",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet",
+							"sid": 613839100054901,
+							"parameters": {
+								"object": "column2"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "weapon",
-							"sid": 805511893544694
+							"objectClass": "bullet",
+							"sid": 372945259714530
 						}
 					],
-					"sid": 854398955225922
+					"sid": 238410781645650
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet",
+							"sid": 828876474434675,
+							"parameters": {
+								"object": "column"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bullet",
+							"sid": 509320475034266
+						}
+					],
+					"sid": 793441651528305
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 504097895211075,
+							"parameters": {
+								"variable": "ItemCounter",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 262981909945983,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 225340905131727,
+									"parameters": {
+										"key": 71
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "chest",
+									"sid": 515768448064649,
+									"parameters": {
+										"object": "ball_3",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "chest",
+									"sid": 954320885699253,
+									"parameters": {
+										"animation": "\"Animation 2\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 222756235015005
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-layer",
+							"objectClass": "ball_3",
+							"sid": 346250660620172,
+							"parameters": {
+								"layer": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 103433201756426,
+							"parameters": {
+								"variable": "ItemCounter",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "door",
+							"sid": 660204575062801,
+							"behaviorType": "Solid",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "door",
+							"sid": 393308941765548,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 287006364701544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet2",
+							"sid": 765383467411281,
+							"parameters": {
+								"object": "wall_for_bullet"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bullet2",
+							"sid": 470714527672279
+						}
+					],
+					"sid": 821561021186635
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "shoot_spam",
+							"sid": 307132322115767,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 369960934212305,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 723143498953708,
+									"parameters": {
+										"interval-seconds": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "shoot_spam",
+									"sid": 478287113265726,
+									"parameters": {
+										"object": "bullet2",
+										"layer": "3",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "bullet2",
+									"sid": 939801733820794,
+									"parameters": {
+										"angle": "90"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "bullet2",
+									"sid": 755433427758034,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "600"
+									}
+								}
+							],
+							"sid": 140160855805292
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "shoot_spam2",
+							"sid": 903625734902703,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 298165457208755,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 600166356591524,
+									"parameters": {
+										"interval-seconds": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "shoot_spam2",
+									"sid": 317085708110701,
+									"parameters": {
+										"object": "bullet2",
+										"layer": "3",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "bullet2",
+									"sid": 903863156137613,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "bullet2",
+									"sid": 793474472182454,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "600"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 688607623328397,
+									"parameters": {
+										"seconds": "1.0"
+									}
+								}
+							],
+							"sid": 454820033359396
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet2",
+							"sid": 904730836368101,
+							"parameters": {
+								"object": "HitBox"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 940734793081827,
+							"parameters": {
+								"variable": "catHP",
+								"value": "1"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Cat",
+							"sid": 973352544532755,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "0.5"
+							}
+						}
+					],
+					"sid": 136571033257241
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "stoun",
+							"sid": 757136327065293,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 424796013048270,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 142420870216730,
+									"parameters": {
+										"interval-seconds": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "stoun",
+									"sid": 194422750736377,
+									"parameters": {
+										"object": "mouse_small",
+										"layer": "2",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 380845724311216
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 357856728097038
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-object",
+							"objectClass": "mouse_small",
+							"sid": 656775709711446,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"object": "Cat",
+								"image-point": "0",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 284300452378634
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "mouse_small",
+							"sid": 152188726061825,
+							"parameters": {
+								"object": "HitBox"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "mouse_small",
+							"sid": 704848590457250
+						},
+						{
+							"id": "flash",
+							"objectClass": "Cat",
+							"sid": 746005334206778,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "0.5"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 683397757531925,
+							"parameters": {
+								"variable": "catHP",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 671545194549566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "mouse_small",
+							"sid": 624363335981294,
+							"parameters": {
+								"object": "punch"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "mouse_small",
+							"sid": 514365142244087
+						},
+						{
+							"id": "flash",
+							"objectClass": "stoun",
+							"sid": 761390125470760,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "0.5"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 421655579908806,
+							"parameters": {
+								"variable": "stoun_spawn_HP",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 924292835595474
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 820342603613928,
+							"parameters": {
+								"variable": "stoun_spawn_HP",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "stoun",
+							"sid": 467479241427666
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "stoun",
+							"sid": 779772649157085,
+							"parameters": {
+								"object": "ball_5",
+								"layer": "6",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 381099166879457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "teleport",
+							"sid": 378099530401726,
+							"parameters": {
+								"object": "Cat"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "teleport",
+							"sid": 417547233809030,
+							"parameters": {
+								"object": "teleport_effect",
+								"layer": "5",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 150490680797740,
+							"parameters": {
+								"seconds": "3"
+							}
+						}
+					],
+					"sid": 867841536379011,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Cat",
+									"sid": 959685117035512,
+									"parameters": {
+										"x": "101",
+										"y": "380"
+									}
+								}
+							],
+							"sid": 689754258350406
+						}
+					]
 				}
 			],
-			"sid": 913937312823741
+			"sid": 770067870069606
 		}
 	],
-	"sid": 309606629229580
+	"sid": 239792462410867
 }

@@ -1,19 +1,19 @@
 {
 	"name": "direction",
 	"plugin-id": "Sprite",
-	"sid": 662987398886496,
+	"sid": 786798055127358,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",
 			"name": "Pin",
-			"sid": 697046838222946
+			"sid": 372496229590878
 		},
 		{
 			"behaviorId": "EightDir",
 			"name": "8Direction",
-			"sid": 780597805679643
+			"sid": 863694090351181
 		}
 	],
 	"effectTypes": [],
@@ -29,12 +29,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5856555,
+						"imageSpriteId": 5231715,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 889794058657836,
+				"sid": 715652176182251,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

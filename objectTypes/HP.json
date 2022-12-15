@@ -1,0 +1,89 @@
+{
+	"name": "HP",
+	"plugin-id": "Sprite",
+	"sid": 963582847886890,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 79,
+						"height": 92,
+						"originX": 0.43037974683544306,
+						"originY": 0.45652173913043476,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6353098,
+						"collisionPoly": {
+							"points": [
+								0.08860759493670886,
+								0.16304347826086957,
+								0.43037974683544306,
+								0.14130434782608695,
+								0.8860759493670886,
+								0.05434782608695652,
+								0.9493670886075949,
+								0.45652173913043476,
+								0.759493670886076,
+								0.7391304347826086,
+								0.43037974683544306,
+								0.9021739130434783,
+								0.21518987341772153,
+								0.6304347826086957,
+								0.0379746835443038,
+								0.45652173913043476
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 80,
+						"height": 91,
+						"originX": 0.4375,
+						"originY": 0.45054945054945056,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 331415,
+						"collisionPoly": {
+							"points": [
+								0.1,
+								0.15384615384615385,
+								0.4375,
+								0.12087912087912088,
+								0.8875,
+								0.04395604395604396,
+								0.95,
+								0.45054945054945056,
+								0.7625,
+								0.7362637362637363,
+								0.4375,
+								0.9010989010989011,
+								0.225,
+								0.6263736263736264,
+								0.0375,
+								0.45054945054945056
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 855770889724400,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

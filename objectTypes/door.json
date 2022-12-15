@@ -1,0 +1,100 @@
+{
+	"name": "door",
+	"plugin-id": "Sprite",
+	"sid": 830946682320049,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 564166884730950
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6326286,
+						"collisionPoly": {
+							"points": [
+								0.15666669209798179,
+								0.6968749761581421,
+								0.8549999999999999,
+								0.7000000476837158,
+								0.858333282470703,
+								0.9031249523162842,
+								0.5,
+								0.91875,
+								0.14666659037272134,
+								0.9281249284744263
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 390006247778354,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 300,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 664769,
+						"collisionPoly": {
+							"points": [
+								0.15,
+								0.28125,
+								0.5,
+								0.175,
+								0.8466666666666667,
+								0.28125,
+								0.8466666666666667,
+								0.5,
+								0.8466666666666667,
+								0.7125,
+								0.5,
+								0.91875,
+								0.15,
+								0.7125,
+								0.15,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 449956762021756,
+				"name": "Animation 2",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
