@@ -1,0 +1,20 @@
+{
+	"name": "sword_parts",
+	"plugin-id": "Sprite",
+	"sid": 158990213739481,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 792755741618659
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"S_part_1",
+		"S_part_2",
+		"S_part_3",
+		"S_part_4"
+	]
+}

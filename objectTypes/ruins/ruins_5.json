@@ -1,0 +1,57 @@
+{
+	"name": "ruins_5",
+	"plugin-id": "Sprite",
+	"sid": 335355487795326,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 21,
+						"height": 49,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5801167,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.061224489795918366,
+								0.42857142857142855,
+								0,
+								1,
+								0,
+								1,
+								0.22448979591836735,
+								1,
+								0.9387755102040817,
+								0.42857142857142855,
+								0.9795918367346939,
+								0,
+								0.9795918367346939,
+								0,
+								0.22448979591836735
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 954974300337160,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

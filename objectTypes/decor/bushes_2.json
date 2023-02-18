@@ -1,0 +1,55 @@
+{
+	"name": "bushes_2",
+	"plugin-id": "Sprite",
+	"sid": 269014934503470,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 52,
+						"height": 41,
+						"originX": -0.3076923076923077,
+						"originY": 0.43902439024390244,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9760323,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.5121951219512196,
+								0,
+								0.4634146341463415,
+								0.8269230769230769,
+								0.21951219512195122,
+								0.9615384615384616,
+								0.43902439024390244,
+								0.9230769230769231,
+								0.7804878048780488,
+								0,
+								0.9512195121951219,
+								0,
+								0.43902439024390244
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 221741173667727,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

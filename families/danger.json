@@ -1,0 +1,13 @@
+{
+	"name": "danger",
+	"plugin-id": "Sprite",
+	"sid": 149936111179304,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"monstr_1",
+		"death_Bottom",
+		"mage"
+	]
+}

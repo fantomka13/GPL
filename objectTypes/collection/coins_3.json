@@ -1,0 +1,85 @@
+{
+	"name": "coins_3",
+	"plugin-id": "Sprite",
+	"sid": 966955154264648,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 59,
+						"height": 43,
+						"originX": 0.4067796610169492,
+						"originY": 0.6976744186046512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8650342,
+						"collisionPoly": {
+							"points": [
+								0.310734571036646,
+								0.4263567370037699,
+								0.8474579072941496,
+								0.5271318346955056,
+								0.8079095183119263,
+								0.8837208563043166,
+								0.2429374867239914,
+								0.8682169951209727
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 40,
+						"originX": 0.4166666666666667,
+						"originY": 0.7,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4115277,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 62,
+						"height": 42,
+						"originX": 0.22580645161290322,
+						"originY": 0.6904761904761905,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6983329,
+						"collisionPoly": {
+							"points": [
+								0.13440860215053765,
+								0.38095239609006865,
+								0.6182795493833481,
+								0.5079367804148841,
+								0.6505373267717259,
+								0.8492063037932862,
+								0.11290324631557672,
+								0.8730156156751842
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 473363040035077,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

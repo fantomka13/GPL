@@ -1,0 +1,57 @@
+{
+	"name": "Inventory_sword",
+	"plugin-id": "Sprite",
+	"sid": 497065921132885,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 78,
+						"height": 86,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5298209,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.0534921453456928,
+								0.1980225560107217,
+								0,
+								1,
+								0,
+								1,
+								0.5408706151659604,
+								0.9987777946357826,
+								1,
+								0.1980225560107217,
+								1,
+								0,
+								1,
+								0,
+								0.5408706151659604
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 117198728090373,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

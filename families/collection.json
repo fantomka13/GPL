@@ -1,0 +1,23 @@
+{
+	"name": "collection",
+	"plugin-id": "Sprite",
+	"sid": 624765914908942,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine2",
+			"sid": 478195923266498
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"S_1",
+		"S_2",
+		"S_3",
+		"S_4",
+		"coins_2",
+		"coins",
+		"coins_3"
+	]
+}

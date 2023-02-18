@@ -1,0 +1,145 @@
+{
+	"name": "grass",
+	"plugin-id": "Sprite",
+	"sid": 307071503849186,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1628050,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.8,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.7952380770728704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2771718,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.8,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.7952380770728704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 13,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6090282,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.8,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.7952380770728704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 878956,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.8,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.7952380770728704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 12,
+						"height": 15,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2186318,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.8,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.7952380770728704
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 856823280629382,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": true,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

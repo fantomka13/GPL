@@ -1,25 +1,16 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 31702,
-	"name": "Space cat",
+	"savedWithRelease": 32702,
+	"name": "exam",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
 	"usedAddons": [
 		{
 			"type": "plugin",
-			"id": "Sprite",
-			"name": "Sprite",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -27,95 +18,27 @@
 			"id": "Mouse",
 			"name": "Mouse",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
+			"id": "Sprite",
+			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "Pin",
-			"name": "Pin",
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
-			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direction",
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
 			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Sin",
-			"name": "Sine",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "LOS",
-			"name": "Line of sight",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Platform",
-			"name": "Platform",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Flash",
-			"name": "Flash",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "MoveTo",
-			"name": "Move To",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "bound",
-			"name": "Bound to layout",
-			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
@@ -123,98 +46,207 @@
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "jumpthru",
-			"name": "Jump-thru",
+			"id": "LOS",
+			"name": "Line of sight",
 			"author": "Scirra",
-			"version": "r317.2",
 			"bundled": false
 		},
 		{
-			"type": "effect",
-			"id": "noise",
-			"name": "Noise",
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
-			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
 			"bundled": false
 		}
 	],
-	"uniqueId": "2c9ai47a63u",
+	"uniqueId": "5m0maw14b61",
 	"objectTypes": {
 		"items": [
-			"punch",
-			"Mouse_1",
-			"Cat",
-			"direction",
-			"HitBox",
 			"Keyboard",
-			"bullet",
 			"Mouse",
-			"HP",
-			"HP2",
-			"HP3",
-			"ball_2",
-			"ball_3",
-			"ball_4",
-			"ball_5",
-			"ball_1",
-			"black",
-			"wires",
-			"grass",
-			"ground1",
-			"square",
-			"ground",
-			"wall",
-			"column2",
-			"column",
-			"hitBoxMouse",
-			"ball_background_1",
-			"ball_background_2",
-			"ball_background_3",
-			"ball_background_4",
-			"ball_background_5",
-			"chest",
-			"door",
-			"wall2",
-			"wall3",
-			"wall4",
-			"shoot_spam",
-			"bullet2",
-			"wall_for_bullet",
-			"shoot_spam2",
-			"stoun",
-			"mouse_small",
-			"teleport",
-			"teleport_effect",
-			"grass1",
-			"grass3",
-			"grass4",
-			"column3",
-			"square2"
+			"healthBar",
+			"number_back",
+			"menu"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"ruins_1",
+					"ruins_2",
+					"ruins_3",
+					"ruins_4",
+					"ruins_5",
+					"ruins_6",
+					"ruins_7"
+				],
+				"subfolders": [],
+				"name": "ruins"
+			},
+			{
+				"items": [
+					"camera_follow",
+					"camera_spot_1",
+					"line1_movement",
+					"line2_movement",
+					"death_Bottom",
+					"door_1_point",
+					"revival_1",
+					"sword_box",
+					"hit_box_character",
+					"solid_ground",
+					"mage_weapon"
+				],
+				"subfolders": [],
+				"name": "invisible"
+			},
+			{
+				"items": [
+					"main_character",
+					"monstr_1",
+					"bullet",
+					"mage",
+					"ghost",
+					"cat"
+				],
+				"subfolders": [],
+				"name": "characters"
+			},
+			{
+				"items": [
+					"bushes_1",
+					"bushes_2",
+					"candle",
+					"D",
+					"tree_1",
+					"grass",
+					"enemy_blood",
+					"save_altar"
+				],
+				"subfolders": [],
+				"name": "decor"
+			},
+			{
+				"items": [
+					"A",
+					"E",
+					"F",
+					"death",
+					"mouseLeft",
+					"W",
+					"money"
+				],
+				"subfolders": [],
+				"name": "text"
+			},
+			{
+				"items": [
+					"found",
+					"room",
+					"Tilemap2",
+					"background"
+				],
+				"subfolders": [],
+				"name": "background"
+			},
+			{
+				"items": [
+					"stounBottom"
+				],
+				"subfolders": [],
+				"name": "platforms"
+			},
+			{
+				"items": [
+					"S_1",
+					"S_2",
+					"S_3",
+					"S_4",
+					"coins",
+					"coins_2",
+					"coins_3"
+				],
+				"subfolders": [],
+				"name": "collection"
+			},
+			{
+				"items": [
+					"Inventory_sword",
+					"S_part_1",
+					"S_part_2",
+					"S_part_3",
+					"S_part_4"
+				],
+				"subfolders": [],
+				"name": "inventory"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"danger",
+			"collection",
+			"sword_parts"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"sword_2"
 		],
 		"subfolders": []
 	},
@@ -250,7 +282,7 @@
 				{
 					"name": "icon-16.png",
 					"type": "image/png",
-					"sid": 885281170035908,
+					"sid": 579950726921745,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -258,7 +290,7 @@
 				{
 					"name": "icon-32.png",
 					"type": "image/png",
-					"sid": 830884167443918,
+					"sid": 259181124324691,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -266,7 +298,7 @@
 				{
 					"name": "icon-64.png",
 					"type": "image/png",
-					"sid": 168655720373801,
+					"sid": 450019175313035,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -274,23 +306,15 @@
 				{
 					"name": "icon-128.png",
 					"type": "image/png",
-					"sid": 513148944662866,
+					"sid": 481577329182027,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
 				},
 				{
-					"name": "loading-logo.png",
-					"type": "image/png",
-					"sid": 719365352635387,
-					"icon-info": {
-						"purpose": "loading-logo"
-					}
-				},
-				{
 					"name": "icon-256.png",
 					"type": "image/png",
-					"sid": 155100256666598,
+					"sid": 653808080451956,
 					"icon-info": {
 						"purpose": "app-icon"
 					}
@@ -298,9 +322,17 @@
 				{
 					"name": "icon-512.png",
 					"type": "image/png",
-					"sid": 361338346001920,
+					"sid": 219828006974487,
 					"icon-info": {
 						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 282778313794170,
+					"icon-info": {
+						"purpose": "loading-logo"
 					}
 				}
 			],
@@ -334,7 +366,7 @@
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-integer-scale",
-		"fullscreenQuality": "low",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -365,6 +397,8 @@
 		"downscaling": "medium",
 		"renderingMode": "auto",
 		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
 		"loaderStyle": "splash",
 		"preloadSounds": true,

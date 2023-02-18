@@ -1,0 +1,44 @@
+{
+	"name": "room",
+	"plugin-id": "Sprite",
+	"sid": 758535432106401,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 479,
+						"height": 294,
+						"originX": 0.5010438413361169,
+						"originY": 0.5136054421768708,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7963433,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.615866388308977,
+								"y": 0.4965986394557823
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 835118517702027,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

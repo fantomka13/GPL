@@ -1,0 +1,57 @@
+{
+	"name": "stounBottom",
+	"plugin-id": "Sprite",
+	"sid": 193237326964608,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 50,
+						"originX": 0.48412698412698413,
+						"originY": 0.16,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5062629,
+						"collisionPoly": {
+							"points": [
+								0.1111111111111111,
+								0.28000000000000014,
+								0.48412698412698413,
+								0.12,
+								0.8809523809523809,
+								0.16,
+								0.9365079365079365,
+								0.16,
+								0.9682539682539683,
+								0.6,
+								0.48412698412698413,
+								0.8,
+								0.023809523809523808,
+								0.48,
+								0.14285714285714285,
+								0.16
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 939681858740291,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
