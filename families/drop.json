@@ -1,0 +1,16 @@
+{
+	"name": "drop",
+	"plugin-id": "Sprite",
+	"sid": 961007786318536,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Bat2",
+		"Bat",
+		"dead_demon",
+		"mage",
+		"monstr_1",
+		"vase"
+	]
+}

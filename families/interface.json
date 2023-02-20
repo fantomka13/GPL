@@ -1,0 +1,12 @@
+{
+	"name": "interface",
+	"plugin-id": "Sprite",
+	"sid": 118526216918725,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Inventory_sword",
+		"number_back"
+	]
+}

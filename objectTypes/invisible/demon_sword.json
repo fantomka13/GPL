@@ -1,0 +1,49 @@
+{
+	"name": "demon_sword",
+	"plugin-id": "Sprite",
+	"sid": 859354564445134,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2138340,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.10400009155273439,
+								0.9759986877441419,
+								0.22399959564209015,
+								1,
+								1,
+								0.023998260498046865,
+								0.9680000305175778
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 876120622542252,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

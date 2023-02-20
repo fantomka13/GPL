@@ -1,0 +1,61 @@
+{
+	"name": "health_potion",
+	"plugin-id": "Sprite",
+	"sid": 369010500870506,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 57,
+						"height": 57,
+						"originX": 0.9649122807017544,
+						"originY": 0.7543859649122807,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3117422,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 57,
+						"height": 57,
+						"originX": 0.9649122807017544,
+						"originY": 0.7543859649122807,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8996372,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 57,
+						"height": 57,
+						"originX": 0.9649122807017544,
+						"originY": 0.7543859649122807,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4327519,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 406781060556434,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

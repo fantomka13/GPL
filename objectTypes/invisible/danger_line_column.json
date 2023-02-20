@@ -1,0 +1,51 @@
+{
+	"name": "danger_line_column",
+	"plugin-id": "Sprite",
+	"sid": 136940168172877,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Variable1",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 131912591259576
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 284781295669541
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4169759,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 274227809289701,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

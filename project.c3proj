@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -35,16 +42,16 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -71,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Pathfinding",
+			"name": "Pathfinding",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -85,6 +99,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
@@ -94,6 +115,13 @@
 			"type": "behavior",
 			"id": "bound",
 			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -117,9 +145,17 @@
 		"items": [
 			"Keyboard",
 			"Mouse",
-			"healthBar",
-			"number_back",
-			"menu"
+			"Audio",
+			"key_shop",
+			"soup",
+			"sound_world",
+			"chat",
+			"catsDialog",
+			"Sprite",
+			"Book_intr",
+			"key_inv",
+			"sound_icon",
+			"Sprite3"
 		],
 		"subfolders": [
 			{
@@ -142,12 +178,30 @@
 					"line1_movement",
 					"line2_movement",
 					"death_Bottom",
-					"door_1_point",
 					"revival_1",
 					"sword_box",
 					"hit_box_character",
 					"solid_ground",
-					"mage_weapon"
+					"mage_hit_box",
+					"start_Box",
+					"hit_box_boss",
+					"exit_box",
+					"Camera_2",
+					"healthBar_spot",
+					"camera_3",
+					"danger_line_column",
+					"collision_line_1",
+					"collision_line_down",
+					"collision_line_up",
+					"left_collision",
+					"right_collision",
+					"touch_Point_1",
+					"hit_box_demon",
+					"demon_sword",
+					"teleport_door_boss_1",
+					"teleport_door_boss_2",
+					"teleport_door_cat_1",
+					"teleport_door_cat_2"
 				],
 				"subfolders": [],
 				"name": "invisible"
@@ -159,7 +213,14 @@
 					"bullet",
 					"mage",
 					"ghost",
-					"cat"
+					"cat",
+					"Boss",
+					"book",
+					"dead_demon",
+					"spawn_demon",
+					"Bat",
+					"Bat2",
+					"obelisk"
 				],
 				"subfolders": [],
 				"name": "characters"
@@ -173,7 +234,13 @@
 					"tree_1",
 					"grass",
 					"enemy_blood",
-					"save_altar"
+					"save_altar",
+					"decor_1",
+					"boss_door",
+					"cat_door",
+					"decor_2",
+					"vase",
+					"save_altar2"
 				],
 				"subfolders": [],
 				"name": "decor"
@@ -186,24 +253,47 @@
 					"death",
 					"mouseLeft",
 					"W",
-					"money"
+					"money",
+					"Start",
+					"exit_menu",
+					"First_Dialog",
+					"price"
 				],
 				"subfolders": [],
 				"name": "text"
 			},
 			{
 				"items": [
-					"found",
 					"room",
-					"Tilemap2",
-					"background"
+					"Boss_room_background",
+					"cat_background",
+					"back_decor",
+					"black_black",
+					"tile_back",
+					"Sprite2"
 				],
 				"subfolders": [],
 				"name": "background"
 			},
 			{
 				"items": [
-					"stounBottom"
+					"ground",
+					"flying_platform",
+					"platform_top",
+					"wall",
+					"stouns",
+					"moving_columns",
+					"upDownMoving_platform",
+					"left_right_platform",
+					"blood_stairs",
+					"traps",
+					"rotating_platform",
+					"invisible_platform",
+					"needles",
+					"Sprite5",
+					"water",
+					"platform_boss_fight",
+					"platforms_cat"
 				],
 				"subfolders": [],
 				"name": "platforms"
@@ -216,7 +306,8 @@
 					"S_4",
 					"coins",
 					"coins_2",
-					"coins_3"
+					"coins_3",
+					"health_potion"
 				],
 				"subfolders": [],
 				"name": "collection"
@@ -231,6 +322,62 @@
 				],
 				"subfolders": [],
 				"name": "inventory"
+			},
+			{
+				"items": [
+					"magic_lightning",
+					"fire",
+					"exposion",
+					"shark",
+					"bird",
+					"hammer",
+					"laser"
+				],
+				"subfolders": [],
+				"name": "spells"
+			},
+			{
+				"items": [
+					"healthBar",
+					"menu",
+					"background_intr",
+					"number_back"
+				],
+				"subfolders": [],
+				"name": "interface"
+			},
+			{
+				"items": [
+					"spell_H_spawn_1",
+					"spell_H_spawn_2",
+					"spell_H_spawn_3",
+					"spell_H_spawn_4",
+					"teleport_base",
+					"teleport_world",
+					"zone_1",
+					"zone_2",
+					"zone_3",
+					"zone_4",
+					"laser_spawn_1",
+					"laser_spawn_2",
+					"laser_spawn_3",
+					"laser_spawn_4",
+					"shark_spawn_1",
+					"shark_spawn_2",
+					"shark_spawn_3",
+					"shark_spawn_4",
+					"spawn_obelisk_point_1",
+					"spawn_obelisk_point_2",
+					"spawn_obelisk_point_3",
+					"spawn_obelisk_point_4"
+				],
+				"subfolders": [],
+				"name": "boss fight"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "cats house"
 			}
 		]
 	},
@@ -240,7 +387,10 @@
 		"items": [
 			"danger",
 			"collection",
-			"sword_parts"
+			"sword_parts",
+			"interface",
+			"drop",
+			"spells"
 		],
 		"subfolders": []
 	},
@@ -262,11 +412,101 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "warfare_sword_swipe_slash_b.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 963375318447794,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "d7ef2cf1c7b9c5d.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 554989003961415,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "8c0ed5f6ac24ed4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 842799165638900,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "579b2fbcdd508f7.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 222964068736685,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sword-sound-2-36274.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 876037891751868,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bone-crack-121580.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 135222442225804,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "09-Meydan-Contemplate-the-stars.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 932054620159303,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "a-robust-crew.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 727168014819937,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "DRIVE.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 299182926387053,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Glory-Eternal.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 444918216776208,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Maximalism.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 575229052432371,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

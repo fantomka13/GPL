@@ -8,6 +8,9 @@
 	"members": [
 		"monstr_1",
 		"death_Bottom",
-		"mage"
+		"mage",
+		"Bat",
+		"Bat2",
+		"dead_demon"
 	]
 }

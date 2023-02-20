@@ -1,0 +1,55 @@
+{
+	"name": "moving_columns",
+	"plugin-id": "Sprite",
+	"sid": 163888306009908,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 139134697189547
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 99,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7915257,
+						"collisionPoly": {
+							"points": [
+								0.31333227793375656,
+								0.9882155556470055,
+								0.6300008138020838,
+								0.986532246624982,
+								0.6233335240681969,
+								0.8181823736890802,
+								0.33666819254557284,
+								0.8232319218542447
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 861128548176124,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

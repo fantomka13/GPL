@@ -1,0 +1,13 @@
+{
+	"name": "spells",
+	"plugin-id": "Sprite",
+	"sid": 814067378871949,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"hammer",
+		"shark",
+		"laser"
+	]
+}

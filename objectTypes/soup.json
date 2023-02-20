@@ -1,0 +1,49 @@
+{
+	"name": "soup",
+	"plugin-id": "Sprite",
+	"sid": 375792730644601,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 66,
+						"height": 57,
+						"originX": 0.3333333333333333,
+						"originY": 0.12280701754385964,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5575604,
+						"collisionPoly": {
+							"points": [
+								0.3333333333333333,
+								0.017543859649122806,
+								0.9696969696969697,
+								0.12280701754385964,
+								0.3333333333333333,
+								0.9473684210526315,
+								0.015151515151515152,
+								0.12280701754385964
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 965674794677937,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
