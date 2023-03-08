@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "money",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "20",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -5923,15 +5923,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Saving/revival spot",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [],
-			"sid": 809685351589722
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "camera",
 			"description": "",
 			"isActiveOnStart": true,
@@ -5940,12 +5931,145 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-y",
+							"id": "is-overlapping-another-object",
 							"objectClass": "main_character",
-							"sid": 833323967257039,
+							"sid": 895314608998593,
 							"parameters": {
-								"comparison": 2,
-								"y-co-ordinate": "3000"
+								"object": "NIGHT_SCY"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "camera_follow",
+							"sid": 979369482991270,
+							"parameters": {
+								"object": "Camera_2",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 363931761702459,
+							"parameters": {
+								"scale": "0.70"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "healthBar",
+							"sid": 809364324417421,
+							"parameters": {
+								"layer": "13"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "healthBar",
+							"sid": 554260080751755,
+							"parameters": {
+								"scale": "3"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "healthBar",
+							"sid": 288966756014956,
+							"parameters": {
+								"object": "healthBar_spot",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "number_back",
+							"sid": 172741413136654,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "unpin",
+							"objectClass": "camera_follow",
+							"sid": 345301947492332,
+							"behaviorType": "Pin"
+						}
+					],
+					"sid": 791021431671151
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "main_character",
+							"sid": 872472916069199,
+							"parameters": {
+								"object": "cat_background"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "camera_follow",
+							"sid": 859788596659019,
+							"parameters": {
+								"object": "camera_3",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "unpin",
+							"objectClass": "camera_follow",
+							"sid": 219036066146167,
+							"behaviorType": "Pin"
+						}
+					],
+					"sid": 474340122805495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "main_character",
+							"sid": 902589947369738,
+							"parameters": {
+								"object": "room"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "camera_follow",
+							"sid": 986129243215464,
+							"parameters": {
+								"object": "camera_spot_1",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "unpin",
+							"objectClass": "camera_follow",
+							"sid": 232195768861513,
+							"behaviorType": "Pin"
+						}
+					],
+					"sid": 801675986205922
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "main_character",
+							"sid": 258902523889170,
+							"parameters": {
+								"object": "back_decor"
 							}
 						}
 					],
@@ -5953,7 +6077,7 @@
 						{
 							"id": "set-position",
 							"objectClass": "camera_follow",
-							"sid": 922239843703568,
+							"sid": 751175398715689,
 							"parameters": {
 								"x": "lerp(self.X,main_character.X,0.1)",
 								"y": "main_character.Y-80"
@@ -5962,7 +6086,7 @@
 						{
 							"id": "pin-to-object-properties",
 							"objectClass": "camera_follow",
-							"sid": 767048728390129,
+							"sid": 187896317479982,
 							"behaviorType": "Pin",
 							"parameters": {
 								"pin-to": "main_character",
@@ -5975,204 +6099,7 @@
 							}
 						}
 					],
-					"sid": 185940763619566
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-y",
-							"objectClass": "main_character",
-							"sid": 933778825674369,
-							"parameters": {
-								"comparison": 4,
-								"y-co-ordinate": "3380"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "main_character",
-							"sid": 117832957131367,
-							"parameters": {
-								"comparison": 2,
-								"x-co-ordinate": "1200"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 379926944303835,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 470014538277837
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "camera_follow",
-									"sid": 235633226448649,
-									"parameters": {
-										"object": "camera_spot_1",
-										"image-point-optional": "0"
-									}
-								}
-							],
-							"sid": 436389250391143
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-y",
-							"objectClass": "main_character",
-							"sid": 683097132368228,
-							"parameters": {
-								"comparison": 4,
-								"y-co-ordinate": "3000"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "main_character",
-							"sid": 176637020184431,
-							"parameters": {
-								"comparison": 4,
-								"x-co-ordinate": "1800"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "main_character",
-							"sid": 678598859514284,
-							"parameters": {
-								"comparison": 2,
-								"x-co-ordinate": "4000"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 136361917494587,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 229336374248508
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "camera_follow",
-									"sid": 915969828708436,
-									"parameters": {
-										"object": "Camera_2",
-										"image-point-optional": "0"
-									}
-								},
-								{
-									"id": "set-layout-scale",
-									"objectClass": "System",
-									"sid": 206564331708904,
-									"parameters": {
-										"scale": "0.70"
-									}
-								},
-								{
-									"id": "move-to-layer",
-									"objectClass": "healthBar",
-									"sid": 126228951509334,
-									"parameters": {
-										"layer": "13"
-									}
-								},
-								{
-									"id": "set-scale",
-									"objectClass": "healthBar",
-									"sid": 598945420379000,
-									"parameters": {
-										"scale": "3"
-									}
-								},
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "healthBar",
-									"sid": 216369447959610,
-									"parameters": {
-										"object": "healthBar_spot",
-										"image-point-optional": "0"
-									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "number_back",
-									"sid": 968821721718538,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								}
-							],
-							"sid": 625283276866065
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-y",
-							"objectClass": "main_character",
-							"sid": 412470164353692,
-							"parameters": {
-								"comparison": 4,
-								"y-co-ordinate": "3380"
-							}
-						},
-						{
-							"id": "compare-x",
-							"objectClass": "main_character",
-							"sid": 948384847384510,
-							"parameters": {
-								"comparison": 4,
-								"x-co-ordinate": "4700"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 190749412145163,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 175878175558935
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position-to-another-object",
-									"objectClass": "camera_follow",
-									"sid": 840932553790354,
-									"parameters": {
-										"object": "camera_3",
-										"image-point-optional": "0"
-									}
-								}
-							],
-							"sid": 841726377405957
-						}
-					]
+					"sid": 221960029527437
 				}
 			],
 			"sid": 402495415753440
@@ -8179,7 +8106,8 @@
 							}
 						}
 					],
-					"sid": 775337242365104
+					"sid": 775337242365104,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -8269,13 +8197,22 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 960422611664442,
+							"sid": 831290551091099,
 							"parameters": {
 								"audio-file": "a-robust-crew",
 								"loop": "looping",
-								"volume": "-20",
+								"volume": "-10",
 								"stereo-pan": "0",
 								"tag-optional": "\"cat\""
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 785457359912306,
+							"parameters": {
+								"tag": "\"World\"",
+								"state": "muted"
 							}
 						}
 					],
@@ -8304,6 +8241,15 @@
 								"volume": "-20",
 								"stereo-pan": "0",
 								"tag-optional": "\"World\""
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 505668048929554,
+							"parameters": {
+								"tag": "\"cat\"",
+								"state": "muted"
 							}
 						}
 					],
@@ -8375,7 +8321,8 @@
 							}
 						}
 					],
-					"sid": 293761565821828
+					"sid": 293761565821828,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -8400,7 +8347,8 @@
 							}
 						}
 					],
-					"sid": 846673854536762
+					"sid": 846673854536762,
+					"disabled": true
 				}
 			],
 			"sid": 107383252885826
@@ -8418,11 +8366,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 638625542369627,
+							"sid": 224224448673006,
 							"parameters": {
 								"variable": "money",
 								"comparison": 5,
-								"value": "28"
+								"value": "20"
 							}
 						}
 					],
@@ -8445,10 +8393,10 @@
 								{
 									"id": "subtract-from-eventvar",
 									"objectClass": "System",
-									"sid": 131271924548451,
+									"sid": 856859492954303,
 									"parameters": {
 										"variable": "money",
-										"value": "28"
+										"value": "20"
 									}
 								},
 								{
@@ -8464,6 +8412,30 @@
 							"sid": 882382850272945
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "key_shop",
+							"sid": 367094211305331,
+							"parameters": {
+								"animation": "\"Animation 2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "key_inv",
+							"sid": 366090036288221,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 949157432426149
 				}
 			],
 			"sid": 993385453299138
