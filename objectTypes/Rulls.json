@@ -1,0 +1,57 @@
+{
+	"name": "Rulls",
+	"plugin-id": "Sprite",
+	"sid": 921368160991053,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 84,
+						"height": 97,
+						"originX": 0.4642857142857143,
+						"originY": 0.5773195876288659,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8434274,
+						"collisionPoly": {
+							"points": [
+								0.011904761904761904,
+								0.9587628865979382,
+								0.4642857142857143,
+								0.010309278350515464,
+								0.9880952380952378,
+								0.8969072164948454,
+								0.9880952380952378,
+								0.5773195876288659,
+								0.9880952380952378,
+								0.25773195876288657,
+								0.4642857142857143,
+								0.9896907216494847,
+								0.011904761904761904,
+								0.1958762886597938,
+								0.011904761904761904,
+								0.5773195876288659
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 827249005882950,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

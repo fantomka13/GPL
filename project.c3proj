@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32702,
+	"savedWithRelease": 32703,
 	"name": "exam",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -155,7 +155,10 @@
 			"Book_intr",
 			"key_inv",
 			"sound_icon",
-			"Sprite3"
+			"Sprite3",
+			"theEndScene",
+			"Rulls",
+			"титры"
 		],
 		"subfolders": [
 			{

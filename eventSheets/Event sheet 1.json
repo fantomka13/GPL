@@ -35,7 +35,7 @@
 			"eventType": "variable",
 			"name": "money",
 			"type": "number",
-			"initialValue": "20",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -65,7 +65,7 @@
 			"eventType": "variable",
 			"name": "Boss_Health",
 			"type": "number",
-			"initialValue": "40",
+			"initialValue": "35",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -6538,6 +6538,48 @@
 						}
 					],
 					"sid": 111631399264093
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 181696028100899,
+							"parameters": {
+								"variable": "Boss_Health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "theEndScene",
+							"sid": 838268308419965,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "титры",
+							"sid": 879374544819393,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 943469070008643,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 655623234146162
 				}
 			],
 			"sid": 125560930312637
@@ -7172,9 +7214,9 @@
 												{
 													"id": "set-mirrored",
 													"objectClass": "laser",
-													"sid": 603772626700318,
+													"sid": 544552037080272,
 													"parameters": {
-														"state": "mirrored"
+														"state": "not-mirrored"
 													}
 												}
 											],
@@ -7211,6 +7253,14 @@
 														"layer": "14",
 														"image-point": "0",
 														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "laser",
+													"sid": 624477712050362,
+													"parameters": {
+														"state": "mirrored"
 													}
 												}
 											],
@@ -7252,9 +7302,9 @@
 												{
 													"id": "set-mirrored",
 													"objectClass": "laser",
-													"sid": 276540404652647,
+													"sid": 146739077030902,
 													"parameters": {
-														"state": "mirrored"
+														"state": "not-mirrored"
 													}
 												}
 											],
@@ -7291,6 +7341,14 @@
 														"layer": "14",
 														"image-point": "0",
 														"create-hierarchy": false
+													}
+												},
+												{
+													"id": "set-mirrored",
+													"objectClass": "laser",
+													"sid": 324774517377602,
+													"parameters": {
+														"state": "mirrored"
 													}
 												}
 											],
@@ -8106,8 +8164,7 @@
 							}
 						}
 					],
-					"sid": 775337242365104,
-					"disabled": true
+					"sid": 775337242365104
 				},
 				{
 					"eventType": "block",
