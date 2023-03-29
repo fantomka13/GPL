@@ -1,1 +1,43 @@
-{"inkVersion":21,"root":[["^Once upon a time...","\n","^Walking in the forest, the girl heard an unfamiliar voice.","\n",["ev",{"^->":"0.4.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":"0.c-0","flg":18},{"s":["^Follow the voice",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":"0.4.s"},[{"#n":"$r2"}],"\n",{"->":"0.g-0"},{"#f":5}],"g-0":["^Following the voice, the girl did not notice that she was in the middle of the forest in front of the labyrinth.","\n",["ev",{"^->":"0.g-0.2.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^Enter ",{"->":"$r","var":true},null]}],{"c-1":["ev",{"^->":"0.g-0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.2.s"},[{"#n":"$r2"}],"\n","^As soon as the girl entered the labyrinth, the voice became silent.","\n",{"->":"0.g-1"},{"#f":5}],"#f":5}],"g-1":["^After walking forward five metres, she saw a fork in the road","\n",{"->":"beggining"},["done",{"#f":5,"#n":"g-2"}],{"#f":5}]}],"done",{"beggining":[[["ev",{"^->":"beggining.0.0.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":18},{"s":["^Left",{"->":"$r","var":true},null]}],["ev",{"^->":"beggining.0.1.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^Right",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"beggining.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.0.s"},[{"#n":"$r2"}],"\n",{"->":"Left1"},{"#f":5}],"c-1":["ev",{"^->":"beggining.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.1.s"},[{"#n":"$r2"}],"\n",{"->":"Right1"},{"#f":5}]}],{"#f":1}],"Left1":[["^After walking a little further, the girl was presented with a choice","\n",["ev",{"^->":"Left1.0.2.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":18},{"s":["^Left",{"->":"$r","var":true},null]}],["ev",{"^->":"Left1.0.3.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^right",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"Left1.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.2.s"},[{"#n":"$r2"}],"\n",{"->":"Left2"},{"#f":5}],"c-1":["ev",{"^->":"Left1.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.3.s"},[{"#n":"$r2"}],"\n",{"->":"beggining"},{"#f":5}]}],{"#f":1}],"Right1":["^Continue walking","\n",{"->":"beggining"},{"#f":1}],"Left2":[["^Next choice","\n",["ev",{"^->":"Left2.0.2.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":18},{"s":["^Left",{"->":"$r","var":true},null]}],["ev",{"^->":"Left2.0.3.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^Right",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"Left2.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.2.s"},[{"#n":"$r2"}],"\n",{"->":"Left3"},{"#f":5}],"c-1":["ev",{"^->":"Left2.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.3.s"},[{"#n":"$r2"}],"\n",{"->":"beggining"},{"#f":5}]}],{"#f":1}],"Left3":[[["ev",{"^->":"Left3.0.0.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":18},{"s":["^Left",{"->":"$r","var":true},null]}],["ev",{"^->":"Left3.0.1.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^Right ",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"Left3.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.0.s"},[{"#n":"$r2"}],"\n",{"->":"left4"},{"#f":5}],"c-1":["ev",{"^->":"Left3.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.1.s"},[{"#n":"$r2"}],"\n",{"->":"beggining"},{"#f":5}]}],{"#f":1}],"left4":[["^Whem she got to the last fork of the road she heard voice again","\n",["ev",{"^->":"left4.0.2.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-0","flg":18},{"s":["^Fallow the voice",{"->":"$r","var":true},null]}],["ev",{"^->":"left4.0.3.$r1"},{"temp=":"$r"},"str",{"->":".^.s"},[{"#n":"$r1"}],"/str","/ev",{"*":".^.^.c-1","flg":18},{"s":["^Get out ",{"->":"$r","var":true},null]}],{"c-0":["ev",{"^->":"left4.0.c-0.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.2.s"},[{"#n":"$r2"}],"\n","^The voice was coming from the monster who ended up eating the girl","\n","end",{"#f":5}],"c-1":["ev",{"^->":"left4.0.c-1.$r2"},"/ev",{"temp=":"$r"},{"->":".^.^.3.s"},[{"#n":"$r2"}],"\n","^The girl come back home safe","\n","end",{"#f":5}]}],{"#f":1}],"#f":1}],"listDefs":{}}
+Once upon a time...
+Walking in the forest, the girl heard an unfamiliar voice.
+ * Follow the voice
+- Following the voice, the girl did not notice that she was in the middle of the forest in front of the labyrinth.
+ *Enter 
+ As soon as the girl entered the labyrinth, the voice became silent.
+- After walking forward five metres, she saw a fork in the road
+->beggining
+=== beggining ===
+ * Left
+ ->Left1
+ * Right
+ ->Right1
+
+=== Left1 ===
+After walking a little further, the girl was presented with a choice
+* Left
+-> Left2
+* right
+-> beggining
+=== Right1 ===
+Continue walking 
+->beggining
+===Left2===
+Next choice 
+* Left
+-> Left3
+* Right
+->beggining
+
+=== Left3 ===
+* Left
+->left4
+* Right 
+->beggining
+===left4===
+Whem she got to the last fork of the road she heard voice again
+*Fallow the voice
+The voice was coming from the monster who ended up eating the girl
+->END
+*Get out 
+The girl come back home safe
+    -> END
